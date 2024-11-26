@@ -12,7 +12,7 @@ namespace part01
         std::cout << "\nВведите фамилию: ";
         std::cin >> surName;
         std::string greeting = "Здравствуйте, " + firstName + " " + surName + "!";
-        std::cout << greeting;
+        std::cout << greeting << std::endl;
     }
 }
 
@@ -28,7 +28,7 @@ namespace part02
             std::cin >> guessing;
             if (guessing == hiddenWord)
             {
-                std::cout << "Правильно! Вы победили! Загаданное слово - " << guessing;
+                std::cout << "Правильно! Вы победили! Загаданное слово - " << guessing << std::endl;
                 return;
             }
             else
