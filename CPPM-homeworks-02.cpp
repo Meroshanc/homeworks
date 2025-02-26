@@ -87,7 +87,13 @@ namespace part02
         int num;
         string name;
         float balance;
+        float newBalance;
     };
+
+    void change_balance(account& a, float newValue)
+    {
+        a.balance = newValue;
+    }
 
     void exec()
     {
@@ -99,7 +105,8 @@ namespace part02
         part01::print_string("\nВведите баланс: ");
         cin >> user01.balance;
         part01::print_string("\nВведите новый баланс: ");
-        cin >> user01.balance;
+        cin >> user01.newBalance;
+        change_balance(user01, user01.newBalance);
         part01::print_string("\nВаш счет: ");
         part01::print_string(user01.name); part01::print_string(", ");
         part01::print_string(to_string(user01.num)); part01::print_string(", ");
